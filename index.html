@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Site Example</title>
     <style>
-        body { font-family: system-ui, sans-serif; margin: 0; padding: 0; color: #333; }
+        body { font-family: system-ui, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
         section { padding: 60px 20px; border-bottom: 2px dashed #cbd5e1; position: relative; text-align: center; }
         .section-tag { position: absolute; top: 12px; left: 16px; background: #2563eb; color: white; padding: 4px 10px; font-size: 13px; font-weight: bold; border-radius: 4px; }
         .container { max-width: 800px; margin: 0 auto; }
+        
+        /* Layout Styling */
         .hero { background: #f8fafc; }
         .services { background: #ffffff; }
         .about { background: #f8fafc; }
         .reviews { background: #ffffff; }
-        .contact { background: #f8fafc; }
-        button { background: #2563eb; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer; margin-top: 10px; }
+        .location-section { background: #f8fafc; }
+        .inquiry-section { background: #ffffff; }
+        
+        /* Buttons */
+        .btn-primary { background: #2563eb; color: white; text-decoration: none; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; display: inline-block; margin-top: 15px; border: none; cursor: pointer; }
+        
+        /* Storefront Photo Placeholder */
+        .photo-placeholder { background: #e2e8f0; border: 2px dashed #94a3b8; padding: 40px; margin: 20px 0; border-radius: 8px; color: #64748b; font-weight: bold; }
+        
+        /* Form Inputs */
+        .form-group { margin-bottom: 15px; text-align: left; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-size: 15px; }
     </style>
 </head>
 <body>
@@ -25,7 +38,8 @@
         <div class="container">
             <h1>Welcome to Your Business</h1>
             <p>A simple, strong headline telling visitors what you do best.</p>
-            <button>Get Started</button>
+            <!-- Direct Contact Button in Hero -->
+            <a href="#inquiry" class="btn-primary">Contact Us</a>
         </div>
     </section>
 
@@ -57,11 +71,44 @@
     </section>
 
     <!-- SECTION 5 -->
-    <section class="contact">
-        <span class="section-tag">Section 5: Contact Info / Form</span>
+    <section class="location-section">
+        <span class="section-tag">Section 5: Location Info & Storefront Photo</span>
         <div class="container">
-            <h2>Get In Touch</h2>
-            <p>Phone: (555) 123-4567 | Email: info@example.com</p>
+            <h2>Visit Our Location</h2>
+            
+            <!-- Storefront / Location Picture Placeholder -->
+            <div class="photo-placeholder">
+                📷 Storefront Photo Placeholder (Show building exterior, parking, or lobby here)
+            </div>
+
+            <p><strong>Address:</strong> 123 Main Street, Suite A, Gaffney, SC 29341</p>
+            <p><strong>Hours:</strong> Mon - Fri: 8:00 AM - 5:00 PM | Sat: By Appointment</p>
+            <p><strong>Phone:</strong> (864) 555-0199</p>
+        </div>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section class="inquiry-section" id="inquiry">
+        <span class="section-tag">Section 6: Inquiry Form</span>
+        <div class="container">
+            <h2>Send Us an Inquiry</h2>
+            <p>Have questions or need a quote? Fill out the form below and we'll respond shortly.</p>
+            
+            <form style="max-width: 500px; margin: 0 auto;">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Inquiry / Message</label>
+                    <textarea rows="4" placeholder="Tell us how we can help you..."></textarea>
+                </div>
+                <button type="button" class="btn-primary">Send Inquiry</button>
+            </form>
         </div>
     </section>
 
